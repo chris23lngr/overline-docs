@@ -1,11 +1,21 @@
 # Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
 
-## What is Nextra?
+Welcome to Overline!
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+import {
+  BeakerIcon,
+  RectangleGroupIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/solid";
+import Cards from "../components/Cards";
+import Card from "../components/Card";
 
-## Documentation
-
-The documentation is available at [https://nextra.site](https://nextra.site).
+<Cards num={3}>
+  <Card icon={RocketLaunchIcon} href="/installation" title="Getting started" />
+  <Card
+    icon={BeakerIcon}
+    href="/themeConfiguration"
+    title="Theme Configuration"
+  />
+  <Card icon={RectangleGroupIcon} href="/typography" title="Components" />
+</Cards>

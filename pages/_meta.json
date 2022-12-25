@@ -1,15 +1,25 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "-": {
+    "type": "separator",
+    "title": "Getting started"
+  },
+  "installation": "Installation",
+  "editorSetup": "Editor Setup",
+  "productionOptimization": "Optimization for Production",
+  "--": {
+    "type": "separator",
+    "title": "Configuration"
+  },
+  "themeConfiguration": "Theme Configuration",
+  "---": {
+    "type": "separator",
+    "title": "Components"
+  },
+  "typography": "Typography",
+  "sectionHeader": "Section Header",
   "about": {
     "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
+    "display": "hidden"
   }
 }

@@ -1,18 +1,24 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: <span>My Project</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://github.com/shuding/nextra-docs-template",
   },
-  chat: {
-    link: 'https://discord.com',
-  },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  footer: {
-    text: 'Nextra Docs Template',
-  },
-}
 
-export default config
+  docsRepositoryBase: "https://github.com/chris23lngr/overline-docs",
+  footer: {
+    text: "Nextra Docs Template",
+  },
+  sidebar: {
+    defaultMenuCollapseLevel: 0,
+    titleComponent({ title, type }) {
+      if (type === "separator") {
+        return <div>{title}</div>;
+      }
+      return <>{title}</>;
+    },
+  },
+};
+
+export default config;
