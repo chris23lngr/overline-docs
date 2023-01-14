@@ -3,3 +3,27 @@
 Overline is based on Tailwindcss and therefore basicly uses the same methods to customize the theme.
 Still, there are a few cases, where you might want to check out the overline docs, to get a better
 understanding of how things work.
+
+<br />
+<br />
+import {
+  EyeDropperIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/24/solid";
+import Cards from "../components/Cards";
+import Card from "../components/Card";
+
+<Cards num={2}>
+  <Card
+    icon={EyeDropperIcon}
+    href="/themeConfiguration/colors"
+    title="Color Settings"
+  />
+  <Card
+    icon={DocumentTextIcon}
+    href="/themeConfiguration/fonts"
+    title="Font Settings"
+  />
+</Cards>
+
+In general, though, you should check out the [Tailwindcss documentation](https://tailwindcss.com/docs/installation). There you will find detailed explanations on how to best set up your project.

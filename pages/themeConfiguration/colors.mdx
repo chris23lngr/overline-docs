@@ -1,0 +1,38 @@
+# Customizing Color Settings
+
+Tailwindcss already brings an extensive color palette in itself. This is very helpful and was also used in Overline. However, it is always a good idea to define colors in `tailwind.config.cjs`. This can provide uniformity, so if you want to change the color scheme of your website, you don't have to change the color in each component individually, but can simply define the colors in the configuration, which will be used automatically.
+
+Overline's tailwind configuration currently looks like this:
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+        },
+      },
+      // ...
+    },
+  },
+  // ...
+};
+```
+
+So in a component we can now use the class `bg-primary-600` instead of `bg-blue-600`:
+
+```tsx {1}
+<div className="bg-primary-600">//...</div>
+```
+
+Learn more about colors in tailwind and how to customize them [here](https://tailwindcss.com/docs/customizing-colors).

@@ -1,0 +1,28 @@
+# Customizing Font settings
+
+Overline uses ["Inter var"](https://rsms.me/inter/inter.css) as default font. You can easily change this font by changing the `sans` font in `tailwind.config.cjs`:
+
+```js filename="tailwind.config.cjs" {8}
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Lexend", ...defaultTheme.fontFamily.sans],
+      },
+      // ...
+    },
+  },
+  // ...
+};
+```
+
+import { Callout } from "nextra-theme-docs";
+
+<Callout type="info" emoji="ℹ️">
+  Remember to import the font in `index.html` or in `styles.css`.
+</Callout>
+
+For more detailed information on how to add fonts to Tailwind, you can also read [here](https://tailwindcss.com/docs/font-family).

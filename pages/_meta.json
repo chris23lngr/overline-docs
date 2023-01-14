@@ -4,8 +4,10 @@
     "type": "separator",
     "title": "Getting started"
   },
-  "installation": "Installation",
+  "projectSetup": "Project Setup",
   "editorSetup": "Editor Setup",
+  "projectStructure": "Project Structure",
+  "customizingYourPage": "Creating you Landing page",
   "productionOptimization": "Optimization for Production",
   "--": {
     "type": "separator",
@@ -16,8 +18,19 @@
     "type": "separator",
     "title": "Components"
   },
-  "typography": "Typography",
-  "sectionHeader": "Section Header",
+  "component.Alert": { "display": "hidden", "title": "Alert" },
+  "component.Avatar": { "display": "hidden", "title": "Avatar" },
+  "component.Breadcrumb": { "display": "hidden", "title": "Breadcrumb" },
+  "component.Button": { "display": "hidden", "title": "Button" },
+  "component.Card": { "display": "hidden", "title": "Card" },
+  "component.Checkbox": { "display": "hidden", "title": "Checkbox" },
+  "component.Section": { "display": "hidden", "title": "Section" },
+  "component.SectionHeader": { "display": "hidden", "title": "Section Header" },
+  "component.SectionWrapper": {
+    "display": "hidden",
+    "title": "Section Wrapper"
+  },
+  "component.Typography": { "display": "hidden", "title": "Typography" },
   "about": {
     "title": "About",
     "display": "hidden"

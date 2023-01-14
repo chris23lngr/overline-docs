@@ -1,0 +1,59 @@
+# Project Setup
+
+Before you start developing your project, you should make a few changes to the configurations so that the project is really adapted to your needs.
+
+## Installing the dependencies
+
+Overline uses yarn as package manager. We made this decision because yarn is, in our eyes, a package manager that is very comprehensive and at the same time relatively beginner friendly.
+Start by runing the following command:
+
+`yarn install`
+
+This will install all the needed dependecies from the `package.json`. [Here](/projectStructure) you can learn more about what technologies we use and how we use them.
+
+## Setting up the `package.json`
+
+In the `packages.json` file you should definitely change the name and version of the project:
+
+```json filename="package.json" {2,4}
+{
+  "name": "overline",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  ...
+}
+```
+
+If you want to make further changes to the scripts of your project, you can do that easily:
+
+```json filename="package.json" {3-7}
+{
+  ...
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  ...
+}
+```
+
+import { Callout } from "nextra-theme-docs";
+
+<Callout type="warning" emoji="⚠️">
+  Most dependencies we use are essential, so you **should not remove** them.
+</Callout>
+
+## Other configurations
+
+Overline has already implemented a few technologies from scratch. Technologies like Vite or Postcss often require their own configuration, so it can be helpful to customize them to your needs. Configurations in Overline are to be treated exactly the same as in other projects.
+
+### Tailwind
+
+We use [Tailwindcss](https://tailwindcss.com) for styling. If you want to learn more about how to setup Tailwind with Overline or want to edit the theme, head over to the [Theme Configuration](/themeConfiguration)

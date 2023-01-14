@@ -1,0 +1,93 @@
+# Creating you first page
+
+import { Callout } from "nextra-theme-docs";
+
+<Callout type="info" emoji="ℹ️">
+  Before you start creating your first landing page, you should have gone
+  through the installation steps and understood how Overline is structured.
+</Callout>
+
+Awesome! So let's start creating your first page:
+
+1. Create a file called `Landing.tsx` in your `/pages`- Folder.
+
+2. Export a Component called `LandingPage` from the file that you just created:
+
+   ```tsx filename="Landing.tsx"
+   import React from "react";
+
+   export const LandingPage: React.FC = () => {
+     return <></>;
+   };
+
+   export default LandingPage;
+   ```
+
+3. Now you can start assembling your site from the prefabricated components.
+
+   For example, you can use the Hero section from the Default template and the Features section from the Fourth template. It would look like this:
+
+   ```tsx filename="Landing.tsx"{2-3, 8-9}
+   import React from "react";
+   import LandingDefaultHero from "./Landings/LandingDefault/LandingDefaultHero";
+   import LandingFourFeatures from "./Landings/LandingFour/LandingFourFeatures";
+
+   export const LandingPage: React.FC = () => {
+     return (
+       <>
+         <LandingDefaultHero />
+         <LandingFourFeatures />
+       </>
+     );
+   };
+
+   export default LandingPage;
+   ```
+
+4. Now add your page with an appropriate path to routes-array in `main.tsx`:
+
+   ```tsx filename="main.tsx"
+   // ...
+   const router = createBrowserRouter([
+     {
+       path: "/",
+       element: <App />,
+       errorElement: <ErrorDefaultPage />,
+     },
+     {
+        path: "/mypage":
+        element: <LandingPage />
+     },
+     // other pages...
+   ]);
+   // ...
+   ```
+
+5. If you now start your server with `yarn run dev` and navigate in your browser to [localhost:5173/mypage](http://localhost:5173/mypage), you should see your newly assembled page.
+
+6. One thing you should have noticed by now is that your texts are not yet customized. For example, go to the `LandingDefaultHero.tsx` file and change the text attributes:
+
+   ```tsx filename="LandingDefaultHero.tsx" {3, 10}
+   // ...
+   <SectionHeader
+     headline="This is a great website!"
+     subHeadline="Simplify your data backup and storage process with our cloud-based
+            solution. Our platform allows businesses of all sizes to securely
+            store and manage their data in the cloud."
+     variant="main"
+     overline="The best Saas"
+     ctaBtn={{
+       title: "See our prices",
+       target: "_blank",
+       onClick: () => alert("Hello World"),
+     }}
+     secondaryBtn={{
+       title: "Secondary Button",
+       target: "_blank",
+       href: "https://google.com",
+     }}
+   />
+   // ...
+   ```
+
+   If you now go into you browser, you should instantly see your changes.

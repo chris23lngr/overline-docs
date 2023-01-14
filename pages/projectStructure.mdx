@@ -1,0 +1,64 @@
+# Project structure
+
+Understanding the project's strutcure is crucial to ensuring a smooth process. We try to follow industry standards and use as few configurations as possible. Here you can find information about what technologies we use and how we do it.
+
+## Technologies
+
+Overline is based on different technologies to give you the best possible development experience. Here you can find an introduction to the different technologies we use.
+
+### React
+
+React is one of the most beloved Javascript frameworks for building user interfaces. We chose to use this framework because it brings a lot of features to the developer. Read more about React [here](https://reactjs.org/).
+
+### Typescript
+
+Typescript offers a lot of benefits for the development of React websites. As the name suggests, it brings type definitions into you project. It also integrates seemingless with you React project. Read more about the benefits of Typescript [here](https://www.simplilearn.com/tutorials/reactjs-tutorial/react-typescript#advantages_of_using_typescript_with_react) or browse through the [documentation of Typescript](https://www.typescriptlang.org/docs/).
+
+### Vite
+
+Vite offers many features like Instant Server Start, Lightning Fast HMR and Fully Typed APIs, which makes it a very attractive development environment. This project was created using the create-vite command and the react typescript template:
+
+`yarn create vite overline --template react-ts`
+
+[Here](https://github.com/vitejs/vite/tree/main/packages/create-vite) you can learn more about the `create-vite` command. You can also find more information about the development environment in the [Vite documentation](https://vitejs.dev/guide/),
+
+### Tailwindcss
+
+Tailwindcss is a `utility-first CSS framework`. It gives you the ability to build blazingly fast websites with minimal css. Read more about Tailwindcss [here](https://tailwindcss.com/).
+
+---
+
+These are the main technologies we used in our template. If you want to know more about which technologies we use, take a look at the `package.json` file
+
+## Folder Strucuture
+
+If you have already taken a look at the project, you will have noticed the following structure:
+
+import { Tree, File, Folder } from "../components/file-tree";
+
+<Tree>
+  <Folder name="/src/pages" defaultOpen>
+    <Folder name="App">
+      <File name="..." />
+    </Folder>
+    <Folder name="Inner">
+      <File name="..." />
+    </Folder>
+    <Folder name="Landings" defaultOpen>
+      <Folder name="LandingDefault" defaultOpen>
+        <File name="LandingDefault.tsx" />
+        <File name="LandingDefaultFeatures.tsx" />
+        <File name="..." />
+      </Folder>
+      <Folder name="..."></Folder>
+    </Folder>
+    <File name="index.tsx" />
+  </Folder>
+</Tree>
+
+Here is a brief explanation of how to understand the folder structure:
+
+- `/pages/Landings`: Overline comes with 4 pre-made landing pages. These are divided into individual folders. Each of these folders contains a file which is named exactly like the folder. You will also find other files in this folder, named for example `LandingDefaultFeatures.tsx`. In these files you will find the individual sections of the page.<br/><br/> So if you want to create your own page, you can easily do that by merging the sections from different pages into a new page.
+- `/pages/App`: This folder contains a file named `App.tsx` which exports the default Landingpage.
+- `/pages/index.tsx`: This file currently exports the default export from the `/pages/App`- Directory. This is not the best practice and you should later on change the Landing page to be exported from the `/pages`-Folder
+- `/pages/Inner`: Here you can find all the inner pages like the Error- Template.
